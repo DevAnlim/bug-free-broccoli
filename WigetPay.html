@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script language="javascript">
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+</script>
+<center>
+    <script type='text/javascript'
+            src='https://paymaster.ru/ru-RU/widget/Basic/1?LMI_MERCHANT_ID=41e2b519-fa4b-4c5e-9f88-a02030b8d373&LMI_PAYMENT_AMOUNT=100&LMI_PAYMENT_DESC=Test+payment+var key = getUrlParameter("key")&LMI_CURRENCY=RUB'>
+
+    </script>
+</center>
+</body>
+</html>
